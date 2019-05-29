@@ -15,4 +15,3 @@ void FooBar(Foo f) {
 	cxxFoo * foo = (cxxFoo*)f;
 	foo->Bar();
 }
-

@@ -1,6 +1,8 @@
 package main // import "gofoo"
 
-// // #cgo LDFLAGS: -L./ -lfoo -lstdc++
+// If build without libfoo.a, disable below LDFLAGS comment
+
+// #cgo LDFLAGS: -L./ -lfoo -lstdc++
 // #include "foo.h"
 import "C"
 
@@ -13,9 +15,11 @@ func new() goFoo {
 	ret.foo = C.FooInit()
 	return ret
 }
+
 func (f goFoo) Free() {
 	C.FooFree(f.foo)
 }
+
 func (f goFoo) Bar() {
 	C.FooBar(f.foo)
 }
