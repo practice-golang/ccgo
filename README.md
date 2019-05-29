@@ -1,13 +1,20 @@
 # Practice for Cgo with Cpp
-Worked using `MinGW`, `CMake` on `Windows`
+I tried using `MinGW`, `CMake` on `Windows`
 
 ## Build
 ```sh
+# Windows
 cmake -G "MinGW Makefiles"
-
-mingw32-make.exe
-# or
 cmake --build .
+# or
+mingw32-make.exe
+
+#Linux
+cmake ./CMakeLists.txt
+cmake --build .
+# or
+make
+
 ```
 
 ## Clean
@@ -17,7 +24,12 @@ rm -rf cmake_install.cmake
 rm -rf CMakeCache.txt
 rm -rf Makefile
 rm -rf libfoo.a
+
+# Windows
 rm -rf gofoo.exe
+
+# Linux
+rm -rf gofoo
 
 ```
 
