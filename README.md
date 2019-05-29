@@ -10,7 +10,7 @@ cmake --build .
 mingw32-make.exe
 
 #Linux
-cmake ./CMakeLists.txt
+cmake -G "Unix Makefiles"
 cmake --build .
 # or
 make
