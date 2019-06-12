@@ -1,8 +1,8 @@
 #include "foo.hpp"
 #include "foo.h"
 
-void DoSay() {
-	SayHello();
+void DoSay(char* data) {
+	SayHello(data);
 }
 
 // int main() {

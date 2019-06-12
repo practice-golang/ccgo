@@ -2,7 +2,7 @@
 extern "C" {
 #endif
 
-	void DoSay();
+	void DoSay(char*);
 
 #ifdef __cplusplus
 }

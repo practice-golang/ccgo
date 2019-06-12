@@ -1,1 +1,1 @@
-void SayHello();
+void SayHello(char*);

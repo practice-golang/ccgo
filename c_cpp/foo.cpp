@@ -1,7 +1,8 @@
 #include <iostream>
 
-void SayHello() {
-	std::cout << "Hello World\n";
+void SayHello(char* data) {
+	// std::cout << "Hello World\n";
+	std::cout << data <<"\n";
 }
 
 // int main() {
