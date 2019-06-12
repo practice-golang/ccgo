@@ -6,33 +6,26 @@ I tried using `MinGW`, `CMake` on `Windows`
 # Windows
 cmake -G "MinGW Makefiles"
 cmake --build .
-# or
-mingw32-make.exe
 
 #Linux
 cmake -G "Unix Makefiles"
 cmake --build .
-# or
-make
 
 ```
 
 ## Clean
 ```sh
-rm -rf CMakeFiles
-rm -rf cmake_install.cmake
-rm -rf CMakeCache.txt
-rm -rf Makefile
-rm -rf libfoo.a
+rm -rf CMakeFiles cmake_install.cmake CMakeCache.txt Makefile libfoo.a foo.go
 
 # Windows
-rm -rf gofoo.exe
+rm -f foo.exe
 
 # Linux
-rm -rf gofoo
+rm -f foo
 
 ```
 
 ## Reference
 * https://github.com/burke/howto-go-with-cpp
+* https://github.com/donbright/go-hello-static-world
 * https://stackoverflow.com/a/1721230

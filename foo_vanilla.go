@@ -1,6 +1,6 @@
 package main // import "foo"
 
-// #cgo LDFLAGS: -L./ -lfoo -lstdc++
+// #cgo LDFLAGS: ${LDFLAGS}
 // #include <stdlib.h>
 // #include "c_cpp/foo.h"
 import "C"
