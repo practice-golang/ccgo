@@ -12,5 +12,5 @@ func main() {
 	cstr := C.CString(data)
 	defer C.free(unsafe.Pointer(cstr))
 
-	C.DoSay(cstr)
+	C.DoSay(cstr, &cstr)
 }
