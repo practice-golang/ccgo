@@ -2,6 +2,7 @@
 /cmake_install.cmake
 /CMakeFiles/
 /Makefile
+foo.go
 
 # Prerequisites
 *.d
