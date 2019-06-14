@@ -15,13 +15,14 @@ func main() {
 	data2 := []string{"Hello", "World!!"}
 
 	cstr1 := C.CString(data1)
-	var cstr2 [2]*C.char
+	// var cstr2 [2]*C.char
 	cstr3 := []*C.char{}
 
-	for i, s := range data2 {
+	// for i, s := range data2 {
+	for _, s := range data2 {
 		cs := C.CString(s)
 		defer C.free(unsafe.Pointer(cs))
-		cstr2[i] = cs
+		// cstr2[i] = cs
 		cstr3 = append(cstr3, cs)
 	}
 
