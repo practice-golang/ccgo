@@ -13,6 +13,21 @@ cmake --build .
 
 ```
 
+## Run
+```sh
+# run on linux
+./foo
+# or on windows
+foo.exe
+
+# result
+foo.cpp - data : Hello World!!
+foo.cpp - mytest[1] : World!!
+cwrap.cc from foo.cpp return : myReturn ^-^
+foo.go from cwrap.cc return : myReturn ^-^
+
+```
+
 ## Clean
 ```sh
 rm -rf CMakeFiles cmake_install.cmake CMakeCache.txt Makefile libfoo.a foo.go
