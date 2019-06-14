@@ -6,6 +6,10 @@ package main // import "foo"
 import "C"
 import "unsafe"
 
+import (
+	"fmt"
+)
+
 func main() {
 	data1 := "Hello World!!"
 	data2 := []string{"Hello", "World!!"}
@@ -21,9 +25,13 @@ func main() {
 		cstr3 = append(cstr3, cs)
 	}
 
-	args := (**C.char)(unsafe.Pointer(&cstr2))
-	// Slice not work as C pointer so use array instead of slice
-	// args := (**C.char)(unsafe.Pointer(&cstr3))
+	// Choose array(cstr2) or slice(cstr3)
+	// args := (**C.char)(unsafe.Pointer(&cstr2))
+	args := (**C.char)(unsafe.Pointer(&cstr3[0]))
 
-	C.DoSay(cstr1, args)
+	cgoResult := C.DoSay(cstr1, args)
+	result := C.GoString(cgoResult)
+
+	fmt.Print("foo.go from cwrap.cc return : ")
+	fmt.Println(result)
 }

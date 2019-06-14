@@ -1,9 +1,14 @@
 #include "foo.hpp"
 #include "foo.h"
+#include <cstdio>
 
-void DoSay(char* data, char** mytest) {
+char* DoSay(char* data, char** mytest) {
 	// SayHello(data, &data);
-	SayHello(data, mytest);
+	char* result = SayHello(data, mytest);
+
+	printf("cwrap.cc from foo.cpp return : %s\n", result);
+
+	return result;
 }
 
 // int main() {

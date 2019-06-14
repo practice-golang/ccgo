@@ -1,1 +1,1 @@
-void SayHello(char*, char**);
+char* SayHello(char*, char**);
