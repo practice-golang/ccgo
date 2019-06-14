@@ -28,6 +28,7 @@ func main() {
 	// Choose array(cstr2) or slice(cstr3)
 	// args := (**C.char)(unsafe.Pointer(&cstr2))
 	args := (**C.char)(unsafe.Pointer(&cstr3[0]))
+	defer C.free(unsafe.Pointer(args))
 
 	cgoResult := C.DoSay(cstr1, args)
 	result := C.GoString(cgoResult)
