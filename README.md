@@ -1,4 +1,4 @@
-# Practice for Cgo with Cpp
+# Practice for Cgo with CMake
 I tried using `MinGW`, `CMake` on `Windows`
 
 ## Build
